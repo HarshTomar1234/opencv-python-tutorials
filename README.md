@@ -78,10 +78,50 @@ pip install opencv-contrib-python
     - Object tracking
     - Feature detection and matching
 
-12. [Machine Learning with OpenCV](12_machine_learning/README.md)
+12. [Feature Detection and Matching](12_feature_detection/README.md)
+    - SIFT, SURF, ORB
+    - Feature matching
+    - Homography
+
+13. [Camera Calibration](13_camera_calibration/README.md)
+    - Camera matrix
+    - Distortion coefficients
+    - Calibration process
+
+14. [Depth Estimation and 3D Reconstruction](14_depth_estimation/README.md)
+    - Stereo vision
+    - Disparity maps
+    - 3D point clouds
+
+15. [Optical Flow](15_optical_flow/README.md)
+    - Lucas-Kanade method
+    - Dense optical flow
+    - Motion analysis
+
+16. [Image Segmentation](16_segmentation/README.md)
+    - Watershed algorithm
+    - GrabCut algorithm
+    - K-means clustering
+
+17. [Machine Learning with OpenCV](17_machine_learning/README.md)
     - K-Nearest Neighbors
     - Support Vector Machines
     - Neural Networks
+
+18. [Deep Learning with OpenCV](18_deep_learning/README.md)
+    - Using pre-trained models
+    - Object detection with YOLO
+    - Neural style transfer
+
+19. [Augmented Reality](19_augmented_reality/README.md)
+    - Marker-based AR
+    - Pose estimation
+    - Overlaying 3D objects
+
+20. [Project: Real-time Applications](20_projects/README.md)
+    - Face recognition system
+    - Lane detection for autonomous vehicles
+    - Document scanner
 
 ## How to Use This Repository
 
@@ -89,6 +129,10 @@ pip install opencv-contrib-python
 2. Each folder contains a README.md with theory and explanations
 3. Run the Python scripts to see the concepts in action
 4. Experiment by modifying the scripts to deepen your understanding
+
+## Sample Images
+
+The `images` directory contains sample images used throughout the tutorials. These images are provided for educational purposes.
 
 ## Contributing
 
