@@ -36,11 +36,11 @@ pip install -r requirements.txt
 9. [Histograms](09_histograms/README.md)
 10. [Video Basics](10_video_basics/README.md)
 11. [Object Detection](11_object_detection/README.md)
-12. [Image Segmentation](12_image_segmentation/README.md)
-13. [Image Filtering and Convolution](13_filtering/README.md)
-14. [Image Transformations](14_transformations/README.md)
-15. [Camera Calibration](15_camera_calibration/README.md)
-16. [Optical Flow](16_optical_flow/README.md)
+12. [Feature Detection](12_feature_detection/README.md)
+13. [Image Segmentation](13_image_segmentation/README.md)
+14. [Image Filtering and Convolution](14_filtering/README.md)
+15. [Image Transformations](15_transformations/README.md)
+16. [Camera Calibration](16_camera_calibration/README.md)
 
 ### Advanced Topics
 17. [Machine Learning with OpenCV](17_machine_learning/README.md)
