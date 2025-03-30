@@ -11,26 +11,28 @@ def main():
     # Print OpenCV version
     print(f"OpenCV Version: {cv2.__version__}")
     
-    # Create a simple black image (zeros = black)
+    # # Create a simple black image (zeros = black)
     height, width = 500, 700
-    img = np.zeros((height, width, 3), dtype=np.uint8)
+    img = np.zeros((height, width, 3), dtype=np.uint8) # 3 channels for BGR color image and uint8 for pixel values
     
-    # Draw a blue rectangle
-    # Parameters: image, top-left corner, bottom-right corner, color (BGR), thickness
-    cv2.rectangle(img, (50, 50), (300, 200), (255, 0, 0), thickness=2)
+    # # Draw a blue rectangle
+    # # Parameters: image, top-left corner, bottom-right corner, color (BGR), thickness
+    cv2.rectangle(img, (50, 50), (300, 200), (255, 0, 0), thickness=2) 
     
-    # Draw a green circle
+    # # Draw a green circle
     # Parameters: image, center, radius, color (BGR), thickness (-1 means filled)
-    cv2.circle(img, (400, 100), 75, (0, 255, 0), thickness=-1)
+    cv2.circle(img, (400, 100), 75, (0, 255, 0), thickness=-1) 
+    # cv2.circle(img, (452, 265), 75, (0, 255, 0), thickness= 2) # here 2 is the thickness of the circle and this thickness is basically the outline of the circle
+
     
-    # Draw a red line
+    # # Draw a red line
     # Parameters: image, start point, end point, color (BGR), thickness
     cv2.line(img, (100, 300), (600, 300), (0, 0, 255), thickness=5)
     
-    # Add text
+    # # Add text
     font = cv2.FONT_HERSHEY_SIMPLEX
-    cv2.putText(img, 'OpenCV Introduction', (150, 400), font, 1.5, (255, 255, 255), 2)
-    
+    cv2.putText(img, 'OpenCV Introduction', (150, 400), font, 1.5, (255, 255, 255), 2) # here 1.5 is the font scale and 2 is the thickness of the text
+
     # Display the image
     cv2.imshow('OpenCV Basics', img)
     
