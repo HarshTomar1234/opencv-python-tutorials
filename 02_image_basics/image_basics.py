@@ -51,7 +51,7 @@ def main():
     pixel = pixel_img[y, x]
     print(f"Pixel at ({x}, {y}): {pixel} (BGR)")
     
-    # Modify a pixel
+    # # Modify a pixel
     pixel_img[y, x] = [0, 0, 255]  # Set to red in BGR
     
     # Draw a circle to highlight the modified pixel
@@ -92,7 +92,7 @@ def main():
     
     # Create colored single-channel images for better visualization
     zeros = np.zeros_like(b)
-    blue_img = cv2.merge([b, zeros, zeros])  # Only blue channel
+    blue_img = cv2.merge([b, zeros, zeros])  # Only blue channel  # it 
     green_img = cv2.merge([zeros, g, zeros])  # Only green channel
     red_img = cv2.merge([zeros, zeros, r])    # Only red channel
     
@@ -110,7 +110,7 @@ def main():
     cv2.waitKey(0)
     
     # Resize by scaling factor
-    half_size = cv2.resize(img, None, fx=0.5, fy=0.5)
+    half_size = cv2.resize(img, None, fx=0.5, fy=0.5) # here fx and fy are the scaling factors for width and height respectively
     double_size = cv2.resize(img, None, fx=2, fy=2)
     
     cv2.imshow('Half Size', half_size)
@@ -124,7 +124,13 @@ def main():
     height, width = img.shape[:2]
     
     # Define the rotation matrix
-    rotation_matrix = cv2.getRotationMatrix2D((width/2, height/2), 45, 1)
+    rotation_matrix = cv2.getRotationMatrix2D((width/2, height/2), 45, 1)  # getRotationMatrix2D(center, angle, scale) center is the center of rotation, angle is the angle of rotation in degrees, scale is the scale factor for the rotation
+    # Scale factor = 1: No scaling, the image size remains the same.
+    # Scale factor > 1: The image is enlarged. For example, 2 would double the size.
+    # Scale factor < 1: The image is reduced. For example, 0.5 would halve the size.
+
+    # + angle ---> counter-clockwise rotation
+    # - angle ---> clockwise rotation
     
     # Apply the rotation
     rotated_img = cv2.warpAffine(img, rotation_matrix, (width, height))
@@ -135,19 +141,16 @@ def main():
     # 9. Flipping images
     print("\n9. FLIPPING IMAGES")
     # Flip horizontally
-    horizontal_flip = cv2.flip(img, 1)
+    horizontal_flip = cv2.flip(img, 1) # here 1 is the flip code for horizontal flip and 0 is the flip code for vertical flip
     cv2.imshow('Horizontal Flip', horizontal_flip)
-    cv2.waitKey(0)
-    
     # Flip vertically
     vertical_flip = cv2.flip(img, 0)
     cv2.imshow('Vertical Flip', vertical_flip)
-    cv2.waitKey(0)
-    
     # Flip both horizontally & vertically
     both_flip = cv2.flip(img, -1)
     cv2.imshow('Both Flip', both_flip)
     cv2.waitKey(0)
+    
     
     # 10. Saving images
     print("\n10. SAVING IMAGES")
